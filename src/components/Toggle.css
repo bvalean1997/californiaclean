@@ -1,0 +1,31 @@
+.toggle {
+  min-width: 50px;
+  height: 30px;
+  border-radius: 50px;
+  margin-right: 15px;
+  background-image: linear-gradient(aqua, skyblue);
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle.en {
+  background-image: linear-gradient(blue, skyblue);
+}
+
+.notch {
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  background-color: yellow;
+  box-shadow: 0 0 5px yellow;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: all 0.3s ease;
+}
+
+.en > .notch {
+  background-color: red;
+  box-shadow: 0 0 5px red;
+  transform: translate(19px, 0);
+}

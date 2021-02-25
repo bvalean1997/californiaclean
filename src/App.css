@@ -1,38 +1,201 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+  font-family: "Helvetica";
+  line-height: 1.5rem;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: "Pacifico", cursive;
+  font-weight: 100;
+  margin-bottom: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  color: grey;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+}
+.active {
+  text-decoration: underline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.top {
+  color: white;
+  height: 20em;
+  min-height: 70vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+
+  background-image: url("img/pic2.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 
-.App-link {
-  color: #61dafb;
+.top div {
+  opacity: 0;
+  animation-name: prova;
+  animation-duration: 0.8s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes prova {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.alert div {
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 23, 110);
+  display: flex;
+  text-align: center;
+  height: 40px;
+  color: white;
+  font-weight: 100;
+}
+
+.flexBox {
+  display: flex;
+  align-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.box1 {
+  flex-basis: 10%;
+}
+
+.box2 {
+  flex-basis: 30%;
+}
+
+.box3 {
+  flex-basis: 10%;
+}
+
+.box4 {
+  height: 100vh;
+  flex-basis: 50%;
+}
+
+.box5 {
+  height: 100vh;
+  flex-basis: 50%;
+}
+.box6 {
+  flex-basis: 10%;
+}
+.box7 {
+  flex-basis: 30%;
+}
+.box8 {
+  flex-basis: 10%;
+}
+
+.color1 {
+  background-color: aqua;
+}
+
+.color2 {
+  background-color: #fffd6f;
+}
+
+.background1 {
+  background-image: url("./img/pic1.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.background2 {
+  background-image: url("./img/pic2.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.background3 {
+  background-image: url("./img/pic3.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.background4 {
+  background-image: url("./img/pic4.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.background5 {
+  background-image: url("./img/pic5.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+@media only screen and (max-width: 769px) {
+  * {
+    font-size: 18px;
+  }
+
+  .alert div {
+    font-size: 12px;
+  }
+
+  .flexBox {
+    flex-direction: column;
+    align-content: center;
+    align-items: stretch;
+    height: auto;
+    min-height: 0;
+  }
+
+  .box1 {
+    display: none;
+  }
+  .box2,
+  .box7 {
+    padding: 10px;
+  }
+  .box3 {
+    display: none;
+  }
+  .box4 {
+    width: 100%;
+    height: 300px;
+  }
+  .box5 {
+    width: 100%;
+    height: 300px;
+    order: 2;
+  }
+  .box6 {
+    display: none;
+  }
+  .box8 {
+    display: none;
   }
 }
