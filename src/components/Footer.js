@@ -2,21 +2,23 @@ import React from 'react'
 import footer_logo from '../img/footer_logo.png'
 import drop from '../img/drop.png'
 import './Footer.css'
+import { useTranslation } from 'react-i18next'
 
 const Footer = props => {
+  const { t, i18n } = useTranslation()
   return (
     <footer>
       <div className="footer">
         <div className="spacer"></div>
         <ul className="services">
-          <li className="server-headline"><h3>SERVICES<img className="drop" src={drop} /></h3></li>
-          <li><strong>Deep</strong> Cleaning</li>
-          <li><strong>Home</strong> Cleaning</li>
-          <li><strong>Kitchen</strong> Cleaning</li>
-          <li><strong>Windows</strong> Cleaning</li>
-          <li><strong>Relocation</strong> Cleaning</li>
-          <li><strong>Office &amp; Retail</strong> Cleaning</li>
-          <li><strong>Post Construction</strong> Cleaning</li>
+          <li className="server-headline"><h3>{t('FooterServices.1')}<img className="drop" src={drop} /></h3></li>
+          <li>{t('FooterServices.2')}</li>
+          <li>{t('FooterServices.3')}</li>
+          <li>{t('FooterServices.4')}</li>
+          <li>{t('FooterServices.5')}</li>
+          <li>{t('FooterServices.6')}</li>
+          <li>{t('FooterServices.7')}</li>
+          <li>{t('FooterServices.8')}</li>
         </ul>
 
         <div className="footer-logo"><img src={footer_logo} /></div>

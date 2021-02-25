@@ -1,4 +1,7 @@
 {
+  "Alert": {
+    "1": "50% Discount on regular cleaning until March 15th"
+  },
   "HomeCleaning": {
     "1": "Home Cleaning"
   },
@@ -13,5 +16,40 @@
   },
   "About": {
     "1": "About"
+  },
+  "Try": {
+    "1": "Book a home cleaning today",
+    "2": "for 100kr per hour",
+    "3": "Call us at 072-869 21 23"
+  },
+  "WhyHomeCleaning": {
+    "1": "Why home cleaning",
+    "2": "We believe that modern folks and family need cleaning help to have time for that little extra in their every day life."
+  },
+  "Enjoy": {
+    "1": "We clean, you relax!",
+    "2": "Together we agree on what should be included in your home cleaning profile. With every cleaning occasion, the same co-worker will come out to do the work. In our cleaning package, we always use eco friendly products and towels because we care for the environment both inside and outside your home."
+  },
+  "Services": {
+    "1": "Services",
+    "2": "Our professional cleaners are trained in regular cleaning, deep cleaning, windows washing, kitchen and bathroom cleaning as well as moving cleaning. We cover all your cleaning needs home and if there is something you need that is not standard, you can always add additional services."
+  },
+  "Work": {
+    "1": "Work",
+    "2": "Want to work with California Clean? We train personell in cleaning and all our staff members will go through a rigorous training with everything from material knowledge and furniture care to the use of cleaning products, clothing care and special equipment. Because many of our crew members come from English speaking countries we even do Swedish language sessions together."
+  },
+  "About": {
+    "1": "About us",
+    "2": "California Clean was established in Orange & Los Angeles County, California in 1996 and was run successfully for 10 sunshine years ;). Later we moved to Belgium, soon to Holland and now we are based in Sweden."
+  },
+  "FooterServices": {
+    "1": "Services",
+    "2": "Deep Cleaning",
+    "3": "Home Cleaning",
+    "4": "Kitchen Cleaning",
+    "5": "Windows Cleaning",
+    "6": "Relocation Cleaning",
+    "7": "Office & Retail Cleaning",
+    "8": "Post Construction Cleaning"
   }
 }

@@ -1,9 +1,11 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 const Top = () => {
+  const { t, i18n } = useTranslation()
   return (
     <div className="alert">
-      <div>50% Rabatt på regelbunden städning till den 15e Mars</div>
+      <div>{t('Alert.1')}</div>
     </div>
   )
 }

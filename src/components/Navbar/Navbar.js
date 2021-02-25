@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../../img/palm.png'
 import './Navbar.css'
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton'
@@ -6,23 +6,28 @@ import {Link} from 'react-scroll'
 import {animateScroll as scroll} from 'react-scroll'
 import Toggle from '../Toggle'
 import { useTranslation } from 'react-i18next'
+import i18n from '../../i18next'
 
 
 const Navbar = props => {
-  const { t, i18n } = useTranslation()
-  const [toggled, setToggled] = React.useState(false)
+  
+  const { t, i18n } = useTranslation()  
+  const [toggled, setToggled] = useState(false)
+  
   const toggleClickHandler = () => {
-    setToggled(s => !s)
-    if (toggled) i18n.changeLanguage('se')
-    else i18n.changeLanguage('en')    
+    setToggled(s => !s)    
+    toggled ? i18n.changeLanguage('se') : i18n.changeLanguage('en')          
   }
+  
+  if (i18n.language === "en") setTimeout (() => { setToggled(true) }, 200)
+  
   return (
     <header>
       <nav> 
         <div className="toolbar__toggle-button">
           <DrawerToggleButton click={props.drawerClickHandler} />
         </div>   
-        <div className="logotype" onClick={() => scroll.scrollToTop()}> 
+        <div className="logotype" onClick={() => scroll.scrollToTop()}>
           <h4>
             <img className="logo" src={logo} alt="California Clean"/>
             California Clean</h4>

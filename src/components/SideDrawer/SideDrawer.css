@@ -27,6 +27,7 @@
 
 .side-drawer li {
   margin: 0.5rem 0;
+  cursor: pointer;
 }
 
 .side-drawer a:active {
