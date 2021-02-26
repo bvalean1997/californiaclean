@@ -15,6 +15,7 @@ header {
 
 .logotype {
   padding: 0 20px 0 20px;
+  cursor: pointer;
 }
 .logotype h4 {
   font-family: "Pacifico", cursive;

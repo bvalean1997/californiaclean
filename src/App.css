@@ -54,6 +54,10 @@ a:hover {
   animation-fill-mode: forwards;
 }
 
+.top h2 {
+  background-color: rgb(255, 23, 110);
+}
+
 @keyframes prova {
   0% {
     opacity: 0;
@@ -79,16 +83,21 @@ a:hover {
 
 .flexBox {
   display: flex;
+  flex-direction: row;
   align-content: space-between;
   align-items: center;
   height: 100vh;
+}
+
+.flexBox img {
+  display: none;
 }
 
 .box1 {
   flex-basis: 10%;
 }
 
-.box2 {
+.content-box1 {
   flex-basis: 30%;
 }
 
@@ -96,19 +105,19 @@ a:hover {
   flex-basis: 10%;
 }
 
-.box4 {
+.background-box1 {
   height: 100vh;
   flex-basis: 50%;
 }
 
-.box5 {
+.background-box2 {
   height: 100vh;
   flex-basis: 50%;
 }
 .box6 {
   flex-basis: 10%;
 }
-.box7 {
+.content-box2 {
   flex-basis: 30%;
 }
 .box8 {
@@ -173,24 +182,32 @@ a:hover {
     min-height: 0;
   }
 
+  .flexBox img {
+    width: 100%;
+    display: block;
+  }
+
   .box1 {
     display: none;
   }
-  .box2,
-  .box7 {
+  .content-box1 {
+    padding: 10px;
+  }
+  .content-box2 {
     padding: 10px;
   }
   .box3 {
     display: none;
   }
-  .box4 {
-    width: 100%;
-    height: 300px;
+  .background-box1 {
+    order: 1;
+    background: none;
+    height: auto;
   }
-  .box5 {
-    width: 100%;
-    height: 300px;
+  .background-box2 {
     order: 2;
+    background: none;
+    height: auto;
   }
   .box6 {
     display: none;
