@@ -1,0 +1,11 @@
+.alert div {
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 23, 110);
+  display: flex;
+  text-align: center;
+  height: 40px;
+  color: white;
+}

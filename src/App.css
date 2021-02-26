@@ -69,18 +69,6 @@ a:hover {
   }
 }
 
-.alert div {
-  font-size: 16px;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(255, 23, 110);
-  display: flex;
-  text-align: center;
-  height: 40px;
-  color: white;
-  font-weight: 100;
-}
-
 .flexBox {
   display: flex;
   flex-direction: row;

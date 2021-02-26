@@ -1,6 +1,8 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
+import './Top.css';
+
 const Top = () => {
   const { t, i18n } = useTranslation()
   return (
