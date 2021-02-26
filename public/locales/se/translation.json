@@ -1,21 +1,13 @@
 {
   "Alert": {
-    "1": "50% Rabatt på regelbunden städning tills den 15e Mars"
+    "1": "Vårstädning, 50% Rabatt på regelbunden städning fram till 15e Mars"    
   },
   "HomeCleaning": {
-    "1": "Hemstädning"
-  },
-  "CleaningProfile": {
-    "1": "Städprofil"
-  },
-  "Services": {
-    "1": "Tjänster"
-  },
-  "Work": {
-    "1": "Personalutbildning"
-  },
-  "About": {
-    "1": "Om Oss"
+    "1": "Hemstädning",
+    "2": "Städprofil",
+    "3": "Tjänster",
+    "4": "Personalutbildning",
+    "5": "Om Oss"
   },
   "Try": {
     "1": "Boka hemstädning idag",
