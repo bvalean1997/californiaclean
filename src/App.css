@@ -47,6 +47,7 @@ a:hover {
 }
 
 .top div {
+  display: flex;
   opacity: 0;
   animation-name: prova;
   animation-duration: 0.8s;
