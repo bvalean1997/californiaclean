@@ -53,8 +53,8 @@ const App = () => {
 
       <div className="top">
         
-          <div><h1>{t('Try.1')}<br/>{t('Try.2')}</h1></div>
-          <div><h2>{t('Try.3')}</h2></div>
+          <div><h1>{t('Try.1')}<br/>{t('Try.2')}</h1>
+          <h2>{t('Try.3')}</h2></div>
            
       </div>
 
