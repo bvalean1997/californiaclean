@@ -4,7 +4,7 @@ import App from './App';
 import './i18next'
 
 ReactDOM.render(
-  <Suspense fallback={(<div>Loading</div>)} >
+  <Suspense fallback={(<div>Laddar.</div>)} >
   <React.StrictMode>
     <App />
   </React.StrictMode>

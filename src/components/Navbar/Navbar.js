@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import logo from '../../img/palm.png'
 import './Navbar.css'
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton'
@@ -18,8 +18,10 @@ const Navbar = props => {
     setToggled(s => !s)    
     toggled ? i18n.changeLanguage('se') : i18n.changeLanguage('en')          
   }
-  
-  if (i18n.language === "en") setTimeout (() => { setToggled(true) }, 200)
+
+  useEffect(() => {
+    if (i18n.language === "en") setToggled(true)
+  }, []);  
   
   return (
     <header>

@@ -2,14 +2,20 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: 25px;
-  font-family: "Helvetica";
-  line-height: 1.5rem;
 }
 body,
 html {
   margin: 0;
   padding: 0;
+  font-size: 25px;
+  line-height: 1.5rem;
+  font-family: "Helvetica";
+}
+
+button {
+  border-radius: 5px;
+  border: 1px solid #000;
+  padding: 5px;
 }
 
 h1 {
@@ -17,7 +23,7 @@ h1 {
   line-height: 3rem;
   font-family: "Pacifico", cursive;
   font-weight: 100;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 
 a {
@@ -32,13 +38,13 @@ a:hover {
 }
 
 .top {
-  color: white;
   height: 20em;
   min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
 
   background-image: url("img/pic2.jpg");
   background-position: center; /* Center the image */
@@ -46,15 +52,22 @@ a:hover {
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 
-.top div {
+.booking-container {
+  position: absolute;
+}
+
+.top .intro-message {
   opacity: 0;
   animation-name: prova;
   animation-duration: 0.8s;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
+  color: white;
+  margin-right: 50px;
+  position: relative;
 }
 
-.top h2 {
+.top .intro-message h2 {
   background-color: rgb(255, 23, 110);
 }
 
@@ -153,13 +166,110 @@ a:hover {
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 
+.react-calendar {
+  font-size: 16px;
+  width: 200px;
+  border-radius: 5px 5px 0 0;
+  border: none !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.react-calendar * {
+  font-size: 16px;
+}
+
+.react-calendar__navigation {
+  margin-bottom: 0em !important;
+}
+.react-calendar__month-view__weekdays {
+  font-weight: 100 !important;
+}
+
+.calendar {
+  background-color: #eee;
+  border-radius: 5px 5px 5px 5px;
+  display: none;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  z-index: 500;
+
+  transform: translateX(-50%);
+  width: 350px;
+}
+.calendar.open {
+  display: block;
+}
+.radio-btn {
+  display: inline-flex;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.radio__input {
+  display: none;
+}
+
+.radio__label {
+  padding: 4px 14px;
+  color: #000;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.radio__label:not(:last-of-type) {
+  border-right: 1px solid #999;
+}
+.radio__input:checked + .radio__label {
+  background: rgb(255, 23, 110);
+  color: white;
+}
+
+.bookNow {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid #999;
+  padding: 5px 20px;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
 @media only screen and (max-width: 769px) {
   * {
     font-size: 18px;
   }
 
-  .alert div {
-    font-size: 12px;
+  .alert {
+    font-size: 8px;
+  }
+
+  .calendar {
+    margin-top: 15px;
+  }
+
+  .top h1 {
+    font-size: 24px;
+    line-height: 1.6rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .top {
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+  }
+
+  .top .intro-message {
+    margin-right: 0;
+    margin-bottom: 40px;
+    order: 2;
   }
 
   .flexBox {

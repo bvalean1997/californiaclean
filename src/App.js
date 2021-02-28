@@ -6,6 +6,7 @@ import Backdrop from './components/Backdrop/Backdrop'
 import Top from './components/Top'
 import Footer from './components/Footer'
 import { useTranslation } from 'react-i18next'
+import TheCalendar from './components/TheCalendar'
 
 import Aos from 'aos'
 import "aos/dist/aos.css"
@@ -19,7 +20,8 @@ import pic5 from './img/pic5.jpg'
 
 const App = () => {
 
-  const { t, i18n } = useTranslation()
+  const [calendarOpen, setcalendarOpen] = useState(false) 
+  const [time, setTime] = useState() 
   const [sideDrawerOpen, setsideDrawerOpen] = useState(false)  
 
   const drawerToggleClickHandler = () => {
@@ -34,7 +36,7 @@ const App = () => {
 
   let backdrop
 
-  if (sideDrawerOpen) {      
+  if (sideDrawerOpen || calendarOpen) {      
     backdrop = <Backdrop click={backdropClickHandler}/>
   }
 
@@ -44,6 +46,23 @@ const App = () => {
     })
   }, []);
 
+
+  
+
+  
+
+  
+  
+  const openCalendar = (value) => {
+
+    setcalendarOpen(s => !s)
+    
+  }
+
+  const { t, i18n } = useTranslation()
+
+
+
   return (
     <div>
       <Top />
@@ -52,9 +71,16 @@ const App = () => {
       {backdrop}   
 
       <div className="top">
+
+        <div className="bookingContainer">
         
-          <div><h1>{t('Try.1')}<br/>{t('Try.2')}</h1>
-          <h2>{t('Try.3')}</h2></div>
+          <div className="intro-message"><h1>{t('Try.1')}<br/>{t('Try.2')}</h1>
+            <div><button className="bookNow" onClick={ openCalendar }>BOOK NOW</button><h2>{t('Try.3')}</h2></div>
+          </div>
+
+          <TheCalendar show={calendarOpen} />
+
+        </div>
            
       </div>
 
