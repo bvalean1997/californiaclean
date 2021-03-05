@@ -14,6 +14,10 @@
     "2": "for 100kr per hour",
     "3": "Call us at 072-869 21 23"
   },
+  "HowitWorks": {
+    "1": "How does it work?",
+    "2": "We make it easy for you. You simply call us at 072-869 21 23 and we book a time where we meet and create your new Home Cleaning Profile. After that, we start the cleaning at the specified date."
+  },
   "WhyHomeCleaning": {
     "1": "Home cleaning",
     "2": "We believe that modern folks and family need cleaning help to have time for that little extra in their every day life. To come home to a professionally cleaned home feels great. Dirt, dust, and bacteria will be removed at those spots that you don't have time for or are too hard to reach. We have the experience to a great job, swiftly and safely."
@@ -36,8 +40,8 @@
   },
   "FooterServices": {
     "1": "Services",
-    "2": "Deep Cleaning",
-    "3": "Home Cleaning",
+    "2": "Regular Cleaning",
+    "3": "Deep Cleaning",
     "4": "Kitchen Cleaning",
     "5": "Windows Cleaning",
     "6": "Relocation Cleaning",

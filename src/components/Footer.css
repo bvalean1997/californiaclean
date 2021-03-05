@@ -1,6 +1,6 @@
 .footer {
   display: flex;
-  background-color: rgb(255, 23, 110);
+  background-color: rgb(73, 51, 68);
   align-content: space-between;
   color: white;
 
@@ -10,13 +10,16 @@
 }
 .footer ul {
   list-style: none;
-  line-height: 1.95rem;
+  line-height: 1.45rem;
   padding: 0;
   position: relative;
 }
 .footer ul li,
 .footer ul li strong {
   font-size: 18px;
+}
+.footer ul li a {
+  color: white;
 }
 .spacer {
   flex-basis: 150px;
@@ -52,19 +55,23 @@ i {
   text-align: right;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1100px) {
   .footer {
     flex-direction: column;
     align-items: stretch;
     height: auto;
     padding-top: 40px;
   }
+
   .footer > ul {
     padding: 0 45px 0 45px;
   }
   .spacer {
     flex-basis: 0px;
   }
+}
+
+@media only screen and (max-width: 600px) {
   .drop {
     left: 240px;
   }

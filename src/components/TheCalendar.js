@@ -4,6 +4,7 @@ import 'react-calendar/dist/Calendar.css';
 
 const TheCalendar = props => {
   const [date, setDate] = useState(new Date())
+  const [time, setTime] = useState()
   
   
   const onCalendarChange = date => {
@@ -16,12 +17,12 @@ const TheCalendar = props => {
     calendarClasses = ['calendar open']
   }
 
-  const bookNow = () => {
+  const bookNow = (props) => {
     
   }
 
   const changeTime = (value) => {
-    alert(value)
+    setTime(value)
   }
 
   return (
@@ -30,7 +31,7 @@ const TheCalendar = props => {
         onChange={onCalendarChange} 
         value={date} 
         showNeighboringMonth={true}     
-      />
+      />      
       <div className="radio-btn">
         <input onChange={ changeTime } className="radio__input" type="radio" name="time" id="morning" value="morning"></input>
         <label className="radio__label" htmlFor="morning">Morning</label>

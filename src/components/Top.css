@@ -1,5 +1,5 @@
 .alert div {
-  font-size: 10px;
+  font-size: 18px;
   font-weight: 400;
   justify-content: center;
   align-items: center;
@@ -7,5 +7,11 @@
   display: flex;
   text-align: center;
   height: 40px;
-  color: white;
+  color: #eee;
+}
+
+@media only screen and (max-width: 769px) {
+  .alert div {
+    font-size: 11px;
+  }
 }

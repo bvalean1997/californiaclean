@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import { useTranslation } from 'react-i18next'
 import TheCalendar from './components/TheCalendar'
 
+
 import Aos from 'aos'
 import "aos/dist/aos.css"
 
@@ -16,6 +17,7 @@ import pic2 from './img/pic2.jpg'
 import pic3 from './img/pic3.jpg'
 import pic4 from './img/pic4.jpg'
 import pic5 from './img/pic5.jpg'
+import ContactForm from './components/ContactForm';
 
 
 const App = () => {
@@ -23,6 +25,8 @@ const App = () => {
   const [calendarOpen, setcalendarOpen] = useState(false) 
   const [time, setTime] = useState() 
   const [sideDrawerOpen, setsideDrawerOpen] = useState(false)  
+
+  let contactFormClassses = [ 'contact-form' ]
 
   const drawerToggleClickHandler = () => {
     setsideDrawerOpen((prevState) => {
@@ -32,11 +36,12 @@ const App = () => {
 
   const backdropClickHandler = () => {
     setsideDrawerOpen(false)
+    setcalendarOpen(false)
   }
 
   let backdrop
 
-  if (sideDrawerOpen || calendarOpen) {      
+  if (sideDrawerOpen || calendarOpen) {
     backdrop = <Backdrop click={backdropClickHandler}/>
   }
 
@@ -44,14 +49,7 @@ const App = () => {
     Aos.init({
       
     })
-  }, []);
-
-
-  
-
-  
-
-  
+  }, []);  
   
   const openCalendar = (value) => {
 
@@ -78,7 +76,9 @@ const App = () => {
             <div><button className="bookNow" onClick={ openCalendar }>BOOK NOW</button><h2>{t('Try.3')}</h2></div>
           </div>
 
-          <TheCalendar show={calendarOpen} />
+          <TheCalendar show={calendarOpen} show2={ openCalendar } />
+
+          <ContactForm />
 
         </div>
            
@@ -94,8 +94,16 @@ const App = () => {
           <img src={pic1} alt="" />
         </div>    
       </div>
-      
-      
+
+      <div className="flexBox2">
+        <div className="flexSpacer"></div>
+        <div>
+          <h2>Regelbunden städning</h2><br/>
+          <h1>200kr i timmen</h1>
+        </div>
+        <div className="flexSpacer"></div>
+      </div>     
+
       <div id="stadprofil" className="flexBox">
         <div className="background-box2 background2">
           <img src={pic2} alt="" />
@@ -106,8 +114,7 @@ const App = () => {
           <p>{t('Enjoy.2')}</p>      
         </div>
         <div className="box8"></div>
-      </div>
-      
+      </div>     
       
       <div id="tjanster" className="flexBox">
         <div className="box1"></div>
@@ -120,6 +127,44 @@ const App = () => {
           <img src={pic3} alt="" />
         </div>    
       </div>
+
+      <div className="flexBox2">
+        <div className="flexSpacer"></div>
+        <div>
+          <h2>{t('HowitWorks.1')}</h2>
+          <p>{t('HowitWorks.2')}</p>
+        </div>
+        <div className="flexSpacer"></div>
+      </div>
+
+      
+
+{/* 
+      <div className="flexBox4"><h1>Vad vi erbjuder</h1></div>
+      <div className="flexBox3">
+        
+        <div>
+          <h2>Veckostädning</h2>
+          <p>Skräddarsydda lösningar till en fast månadskostnad</p>
+        </div>
+        <div>
+          <h2>Storstädning</h2>
+          <p>Få rent överallt, in till minsta vrå</p>
+        </div>
+        <div>
+          <h2>Flyttstädning</h2>
+          <p>När du flyttar så tar vi hand om städningen</p>
+        </div>
+        <div>
+          <h2>Fönsterputs</h2>
+          <p> Våra professionella fönsterputsare gör dina fönster skinande</p>
+        </div>
+        <div>
+          <h2>Köksstädning</h2>
+          <p>Är det extra viktigt att köket är rent så antar vi utmaningen</p>
+        </div>
+        
+      </div> */}
       
       
       <div id="personal" className="flexBox">

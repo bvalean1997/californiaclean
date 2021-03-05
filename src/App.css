@@ -15,7 +15,6 @@ html {
 button {
   border-radius: 5px;
   border: 1px solid #000;
-  padding: 5px;
 }
 
 h1 {
@@ -23,7 +22,7 @@ h1 {
   line-height: 3rem;
   font-family: "Pacifico", cursive;
   font-weight: 100;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
 }
 
 a {
@@ -80,6 +79,35 @@ a:hover {
     opacity: 1;
     transform: translateY(0px);
   }
+}
+
+.flexBox2 {
+  display: flex;
+  align-items: center;
+  height: 40vh;
+  border-left: 10px solid black;
+}
+.flexBox3 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  height: 60vh;
+  width: 90%;
+  padding-top: 40px;
+}
+.flexBox3 div {
+  padding: 25px;
+  width: 150px;
+}
+.flexSpacer {
+  flex-basis: 50%;
+}
+.flexBox4 {
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
 }
 
 .flexBox {
@@ -193,12 +221,15 @@ a:hover {
   top: 30%;
   left: 50%;
   z-index: 500;
-
-  transform: translateX(-50%);
   width: 350px;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition-property: opacity;
+  transition-delay: 0.5s;
 }
 .calendar.open {
   display: block;
+  opacity: 1;
 }
 .radio-btn {
   display: inline-flex;
@@ -238,8 +269,44 @@ a:hover {
   padding: 5px 20px;
   background: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  display: none;
 }
 
+.contact-form {
+  padding: 20px;
+  width: 350px;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  border-radius: 5px;
+  display: none;
+}
+.contact-form.open {
+  display: block;
+}
+.contact-form h2 {
+  font-size: 18px;
+}
+
+.input-box {
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid #333;
+  text-indent: 5px;
+}
+.send-form {
+  color: rgb(255, 23, 110);
+  border-radius: 20px;
+  border: 1px solid;
+  padding: 10px;
+  font-size: 18px;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: rgb(255, 23, 110);
+  color: white;
+}
 @media only screen and (max-width: 769px) {
   * {
     font-size: 18px;
@@ -251,6 +318,7 @@ a:hover {
 
   .calendar {
     margin-top: 15px;
+    top: 10px;
   }
 
   .top h1 {
@@ -270,6 +338,19 @@ a:hover {
     margin-right: 0;
     margin-bottom: 40px;
     order: 2;
+  }
+
+  .flexBox2 {
+    height: 60vh;
+  }
+  .flexBox3 {
+    padding: 10px;
+    height: auto;
+    flex-direction: column;
+  }
+  .flexBox3 div {
+    padding: 25px;
+    width: 100%;
   }
 
   .flexBox {
